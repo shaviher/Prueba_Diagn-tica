@@ -5,17 +5,34 @@
  */
 package org.josemelgar.system;
 
-/**
- *
- * @author informatica
- */
-public class Main {
+import org.josemelgar.model.DesarrolladorModel;
+import org.josemelgar.model.EmpleadoModel;
+import org.josemelgar.model.TesterModel;
 
-    /**
-     * @param args the command line arguments
-     */
+public class Main {
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Crear instancias directas
+        DesarrolladorModel dev = new DesarrolladorModel("Java", "Juan", "Pérez", 30, 3000.0);
+        DesarrolladorModel dev2 = new DesarrolladorModel("Python", "Ana", "Gómez", 28, 2800.0);
+        TesterModel tester = new TesterModel("Automatización", "Luis", "Martínez", 32, 2900.0);
+        
+        // Usar los métodos
+        dev.trabajar("Sistema de Gestión");    
+        dev2.trabajar(8); 
+
+        tester.trabajar("Selenium", "Proyecto Web"); 
+
+        // Polimorfismo por sustitución
+        EmpleadoModel empleado1 = new DesarrolladorModel("C++", "Carlos", "Sánchez", 35, 3500.0);
+        EmpleadoModel empleado2 = new TesterModel("Manual", "Marta", "López", 29, 2700.0);
+        
+        // Llamadas a los métodos usando la referencia de tipo EmpleadoModel
+        empleado1.trabajar(7); 
+        
+        empleado2.trabajar(6); 
+        
+        // Imprimir información
+        System.out.println(empleado1);
+        System.out.println(empleado2);
     }
-    
 }

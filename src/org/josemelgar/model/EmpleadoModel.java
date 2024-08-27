@@ -9,24 +9,25 @@ package org.josemelgar.model;
  *
  * @author informatica
  */
-public class EmpleadoModel {
+public abstract class EmpleadoModel {
     
     private String nombre;
     private String apellido;
-    private int edad;
+    private double edad;
     private double salario;
     
     public EmpleadoModel(){
         
     }
 
-    public EmpleadoModel(String nombre, String apellido, int edad, double salario) {
+    public EmpleadoModel(String nombre, String apellido, double edad, double salario) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.salario = salario;
     }
-
+    
+    
     public String getNombre() {
         return nombre;
     }
@@ -43,11 +44,11 @@ public class EmpleadoModel {
         this.apellido = apellido;
     }
 
-    public int getEdad() {
+    public double getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(double edad) {
         this.edad = edad;
     }
 
@@ -59,12 +60,15 @@ public class EmpleadoModel {
         this.salario = salario;
     }
     
+    abstract void trabajar();
     
-    
+    public void trabajar(int horas){
+        System.out.println("el empleado trabajara durante" + horas + "horas");
+    }
     
     @Override
     public String toString() {
-        return "Empleados{" + "nombre=" + nombre + " edad=" + edad + "salario" + salario +  '}';
+        return "Empleados{" + "nombre=" + nombre + " edad=" + edad + "salario" + salario +'}';
     }
 
 }
