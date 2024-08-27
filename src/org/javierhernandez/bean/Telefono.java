@@ -6,7 +6,7 @@ public class Telefono extends Dispositivo {
 
     // Constructor sin parámetros
     public Telefono() {
-        super(); // Llama al constructor de la clase base
+        super();  //Super() llama los abributos de la clase padre 
     }
 
     public Telefono(String tipo) {
@@ -42,6 +42,7 @@ public class Telefono extends Dispositivo {
     // Implementación del método toString()
     @Override
     public String toString() {
+        //Super() llama los abributos de la clase padre y los junta con la clase hija 
         return super.toString() + ", Tipo=" + tipo + '}';
     }
 }

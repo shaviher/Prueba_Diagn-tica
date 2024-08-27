@@ -6,24 +6,24 @@ package org.javierhernandez.bean;
  * @author javih
  */
 public abstract class Dispositivo {
-    public int marca;
-    public String modelo;
-    public int anio;
+    private String marca;
+    private String modelo;
+    private  int anio;
 
     public Dispositivo() {
     }
 
-    public Dispositivo(int marca, String modelo, int anio) {
+    public Dispositivo(String marca, String modelo, int anio) {
         this.marca = marca;
         this.modelo = modelo;
         this.anio = anio;
     }
 
-    public int getMarca() {
+    public String getMarca() {
         return marca;
     }
 
-    public void setMarca(int marca) {
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
