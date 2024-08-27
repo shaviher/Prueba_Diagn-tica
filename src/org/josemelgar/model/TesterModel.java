@@ -17,11 +17,6 @@ public class TesterModel extends EmpleadoModel {
     public TesterModel() {
     }
 
-    public TesterModel(String tipoPrueba, String nombre, int edad, double salario) {
-        super(nombre, edad, salario);
-        this.tipoPrueba = tipoPrueba;
-    }
-
     public String getTipoPrueba() {
         return tipoPrueba;
     }
@@ -29,10 +24,7 @@ public class TesterModel extends EmpleadoModel {
     public void setTipoPrueba(String tipoPrueba) {
         this.tipoPrueba = tipoPrueba;
     }
+
     
-    
-    
-    
-    
-    
+     
 }

@@ -27,14 +27,6 @@ public class EmpleadoModel {
         this.salario = salario;
     }
 
-    
-
-   
-    @Override
-    public String toString() {
-        return "Empleados{" + "nombre=" + nombre + " edad=" + edad + "salario" + salario +  '}';
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -65,6 +57,14 @@ public class EmpleadoModel {
 
     public void setSalario(double salario) {
         this.salario = salario;
+    }
+    
+    
+    
+    
+    @Override
+    public String toString() {
+        return "Empleados{" + "nombre=" + nombre + " edad=" + edad + "salario" + salario +  '}';
     }
 
 }
